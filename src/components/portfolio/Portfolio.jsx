@@ -1,4 +1,6 @@
 import React from 'react'
+import { TbWorldUp } from "react-icons/tb";
+import { TbBrandGithub } from "react-icons/tb";
 
 export const Portfolio = () => {
   return (
@@ -9,7 +11,7 @@ export const Portfolio = () => {
         <div className="portfolio__grid">
           <div className="portfolio__item reveal" data-aos="fade-up">
             <picture>
-              <source type="image/jpeg" srcset="assets/proyects/iabot.webp" />
+              <source type="image/jpeg" srcSet="assets/proyects/iabot.webp" />
               <img className="portfolio__img" alt="portfolio item" />
             </picture>
             <div className="portfolio__description">
@@ -21,14 +23,14 @@ export const Portfolio = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fas fa-globe-americas"></i> Website
+                  <TbWorldUp className='tb-world'/> Website
                 </a>
                 <a
                   href="https://github.com/Lexthus/IA-BOT"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-github"></i> Repository
+                  <TbBrandGithub className='tb-github'/> Repository
                 </a>
               </div>
             </div>

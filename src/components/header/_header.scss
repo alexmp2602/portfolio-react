@@ -10,6 +10,10 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+
+  @media screen and (max-width: 768px) {
+    padding: 12px 20px;
+  }
 }
 
 .header__logo {
@@ -18,11 +22,13 @@ header {
     cursor: default;
 
     &::before {
+      padding-right: 1px;
       content: "<";
       color: $color-year;
     }
 
     &::after {
+      padding-left: 1px;
       content: "/>";
       color: $color-year;
     }

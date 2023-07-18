@@ -4,11 +4,13 @@
 
 .footer {
   background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
+  padding: 50px;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 5px;
 
   p {
     color: $dark-grey;

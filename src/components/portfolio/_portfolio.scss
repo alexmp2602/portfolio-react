@@ -76,14 +76,14 @@
     display: inline-block;
     margin: auto;
 
-    i {
+    .tb-world, .tb-github {
       color: $white;
     }
 
     &:hover {
       color: $color-year;
       
-      i {
+      .tb-world, .tb-github {
         color: $color-year;
       }
     }

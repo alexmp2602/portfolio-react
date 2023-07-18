@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
 export const Footer = () => {
   return (
     <div>
-        <footer className="footer">
+      <footer className="footer">
         <p>
           Copyright © 2023.
-          <a href="#">@AP</a>
-          <br />
-          All Rights Reserved
+          <a href="#"> @AP</a>
         </p>
+        <p>All Rights Reserved</p>
       </footer>
     </div>
-  )
-}
+  );
+};
