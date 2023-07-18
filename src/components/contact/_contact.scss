@@ -1,0 +1,58 @@
+@import "../../_variables.scss";
+
+/* Sección Contact */
+
+#contact {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 80px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
+
+.contact__mail,
+.contact__github,
+.contact__linked-in,
+.contact__instagram {
+  color: $white;
+  padding: 40px 0;
+  transition: all 0.3s;
+
+  @media (max-width: 767px) {
+    padding: 18px;
+    border-radius: 10px;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    transition: all 0.3s;
+    color: $color-year;
+
+    .bi-mail,
+    .bi-github,
+    .bi-linkedin-in,
+    .bi-instagram {
+      transition: all 0.3s;
+      color: $color-year;
+    }
+  }
+
+  .bi-mail,
+  .bi-github,
+  .bi-linkedin-in,
+  .bi-instagram {
+    color: $color-year;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+}

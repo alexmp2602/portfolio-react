@@ -1,0 +1,130 @@
+@import '../../_variables.scss';
+
+header {
+  padding: 12px 24px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: background 0.3s;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.header__logo {
+  p {
+    font-size: 24px;
+    cursor: default;
+
+    &::before {
+      content: "<";
+      color: $color-year;
+    }
+
+    &::after {
+      content: "/>";
+      color: $color-year;
+    }
+
+    a {
+      color: $cream;
+    }
+  }
+}
+
+// Estilos para el botón de abrir el menú en dispositivos móviles
+#boton-abrir-menu {
+  background-color: transparent;
+  border: none;
+  color: $white;
+  display: none;
+
+  #abrir-menu {
+    font-size: 27px;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+/* Navbar */
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: $white;
+  z-index: 100;
+  gap: 15px;
+
+  @media only screen and (max-width: 768px) {
+    opacity: 0;
+    visibility: hidden;
+    margin: 0;
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: end;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
+    transition: opacity 0.5s ease;
+    border-radius: 0;
+  }
+
+  // Estilos para el botón de cerrar el menú en dispositivos móviles
+  #cerrar-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 12px 24px;
+    color: $white;
+
+    i {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      z-index: 9999;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-year;
+      transition: color 0.5s;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-right: 24px;
+      text-align: end;
+    }
+  }
+}
+
+// Estilos para hacer visible el menú en dispositivos móviles
+nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+//
+
+.active {
+  color: $color-year;
+}

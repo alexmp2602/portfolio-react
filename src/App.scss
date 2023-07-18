@@ -1,0 +1,87 @@
+@use './variables.scss';
+
+// Components //
+
+@import './variables';
+@import './components/header/header';
+@import './components/home/home';
+@import './components/about/about';
+@import './components/services/services';
+@import './components/portfolio/portfolio';
+@import './components/contact/contact';
+@import './components/footer/footer';
+
+//
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: variables.$color-year;
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  display: flex;
+}
+
+h3 {
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  margin: 0 auto;
+  padding: 35px 30px;
+  text-align: center;
+  background: variables.$background-veryperi;
+
+  @media (max-width: 991px) {
+    padding: 20px 20px;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: variables.$background-veryperi;
+  color: variables.$white;
+}
+
+
+/* Otros */
+
+.active a {
+  color: var(--color-year);
+}
+
+.visible {
+  display: flex;
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fade-in.reveal {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}
+
