@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import '../../_variables.scss';
+import './_header.scss';
 import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 
 export const Header = () => {
   const [activeSection, setActiveSection] = useState('home'); // Estado para almacenar la sección activa
   const [headerHeight, setHeaderHeight] = useState(0); // Estado para almacenar la altura del encabezado
-
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 48;
@@ -63,6 +66,10 @@ export const Header = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(prevState => !prevState);
+  };
+
   return (
     <div>
       <header id="header">
@@ -71,12 +78,12 @@ export const Header = () => {
             <a href="#">AP</a>
           </p>
         </div>
-        <button id="boton-abrir-menu">
-          <AiOutlineMenu id="abrir-menu" className="fa-solid fa-bars" />
+        <button id="boton-abrir-menu" onClick={toggleMenu}>
+          <AiOutlineMenu id="abrir-menu" />
         </button>
-        <nav id="navbar-menu">
-          <button id="cerrar-menu">
-            <i className="fa-solid fa-xmark"></i>
+        <nav id="navbar-menu" className={isMenuOpen ? 'open' : ''}>
+          <button id="cerrar-menu" onClick={toggleMenu}>
+            <AiOutlineClose className='boton-cerrar-menu' />
           </button>
           <a
             href="#home"

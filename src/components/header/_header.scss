@@ -39,7 +39,6 @@ header {
   }
 }
 
-// Estilos para el botón de abrir el menú en dispositivos móviles
 #boton-abrir-menu {
   background-color: transparent;
   border: none;
@@ -54,8 +53,6 @@ header {
     display: block;
   }
 }
-
-/* Navbar */
 
 nav {
   height: 100%;
@@ -84,16 +81,15 @@ nav {
     border-radius: 0;
   }
 
-  // Estilos para el botón de cerrar el menú en dispositivos móviles
   #cerrar-menu {
     display: none;
     background-color: transparent;
     border: none;
-    padding: 12px 24px;
+    padding: 12px 20px;
     color: $white;
 
-    i {
-      font-size: 30px;
+    .boton-cerrar-menu {
+      font-size: 27px;
     }
 
     @media screen and (max-width: 768px) {
@@ -121,15 +117,19 @@ nav {
       text-align: end;
     }
   }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+  }
 }
 
-// Estilos para hacer visible el menú en dispositivos móviles
 nav.visible {
   opacity: 1;
   visibility: visible;
 }
-
-//
 
 .active {
   color: $color-year;
