@@ -8,7 +8,7 @@ export const Home = () => {
         <picture>
           <img
             src="assets/img/Profile/profile.webp"
-            alt="picture profile"
+            alt="Profile of Alex Pereyra"
             className="reveal"
             data-aos="fade-up"
           />
