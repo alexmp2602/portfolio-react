@@ -16,7 +16,14 @@
     color: $white;
   }
 
-  a {
-    color: $color-year;
-  }
+  .link-style-button {
+      background: none;
+      color: $color-year;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      text-decoration: none;
+    }
 }

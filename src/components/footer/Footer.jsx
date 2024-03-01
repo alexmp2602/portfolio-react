@@ -5,8 +5,8 @@ export const Footer = () => {
     <div>
       <footer className="footer">
         <p>
-          Copyright © 2023.
-          <a href="#"> @AP</a>
+          Copyright © 2023.{" "}
+          <button className="link-style-button">@AP</button>
         </p>
         <p>All Rights Reserved</p>
       </footer>
