@@ -13,7 +13,7 @@ export const Contact = () => {
         <div className="contact__grid">
 
           <a
-            href="mailto:Lexthus@gmail.com"
+            href="mailto:alexmp.2602@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -24,7 +24,7 @@ export const Contact = () => {
           </a>
 
           <a
-            href="https://github.com/Lexthus"
+            href="https://github.com/alexmp2602"
             target="_blank"
             rel="noopener noreferrer"
           >
